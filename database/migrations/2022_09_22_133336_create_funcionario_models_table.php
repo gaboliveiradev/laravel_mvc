@@ -14,13 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('funcionario', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
+            $table->increments('id');
+            $table->string('nome')->nullable();
+            $table->string('email')->nullable();
+            $table->char('cpf', 11)->nullable();
         });
     }
 
@@ -31,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('funcionario_models');
+        Schema::dropIfExists('funcionario');
     }
 };
