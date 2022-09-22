@@ -34,7 +34,7 @@ class FuncionarioController extends Controller
      */
     public function create()
     {
-        //
+        return view('modules.Funcionario.FuncionarioForm');
     }
 
     /**
@@ -42,10 +42,20 @@ class FuncionarioController extends Controller
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
+     * -> A variavél $request recebe todos os dados vindo do POST do nosso formulário
      */
     public function store(Request $request)
     {
-        //
+        /*
+         * Fillable: medida de segurança do laravel, que permite apenas a inserção
+         * de registros no banco de dados, casos as entidades sejam correspondidas as
+         * presentes na model.
+        */
+        $this->objFuncionario->create([
+            'nome'=>$request->nome,
+            'email'=>$request->email,
+            'cpf'=>$request->cpf
+        ]);
     }
 
     /**

@@ -7,8 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class FuncionarioModel extends Model
 {
+
     protected $table = 'funcionario';
     use HasFactory;
+
+    /*
+     * Fillable: medida de segurança do laravel, que permite apenas a inserção
+     * de registros no banco de dados, casos as entidades sejam correspondidas as
+     * presentes na model.
+    */
+    protected $fillable = ['nome', 'email', 'cpf'];
 
     public function relProduto()
     {

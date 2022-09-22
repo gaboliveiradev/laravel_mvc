@@ -28,7 +28,7 @@
                     Cadastrar
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/funcionario/form">Funcionário</a></li>
+                    <li><a class="dropdown-item" href="{{url('funcionario/create')}}">Funcionário</a></li>
                     <li><a class="dropdown-item" href="/pessoa/form">Pessoa</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" href="/produto/form">Produto</a></li>

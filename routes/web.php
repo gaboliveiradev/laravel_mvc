@@ -17,7 +17,8 @@ use App\Http\Controllers\{
 |
 */
 
-Route::get('/funcionario', [FuncionarioController::class, 'index']);
-Route::get('/funcionario/{item}', [FuncionarioController::class, 'show']);
+Route::post('/funcionario', [FuncionarioController::class, 'index']);
+Route::post('/funcionario/create', [FuncionarioController::class, 'create']);
+Route::post('/funcionario/{item}', [FuncionarioController::class, 'show']);
 
-Route::get('/produto', [ProdutoController::class, 'index']);
+Route::post('/produto', [ProdutoController::class, 'index']);
