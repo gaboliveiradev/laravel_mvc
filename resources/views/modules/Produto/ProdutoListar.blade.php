@@ -1,17 +1,18 @@
-@extends('templates.estrutura')
-@section('title') Laravel MVC | Lista de Funcionários @endsection
+@extends(templates.estrutura)
+@section('title') Laravel MVC | Listar Produtos @endsection
 
 @section('content')
-  <h1 class="text-center">Funcionários</h1> <hr>
+    <h1 class="text-center">Funcionários</h1> <hr>
 
-  <div class="col-8 m-auto">
+    <div class="col-8 m-auto">
     <table class="table">
       <thead class="table-dark">
         <tr>
           <th scope="col">ID</th>
           <th scope="col">NOME</th>
-          <th scope="col">EMAIL</th>
-          <th scope="col">CPF</th>
+          <th scope="col">QUNATIDADE</th>
+          <th scope="col">PREÇO</th>
+          <th scope="col">CADASTRADO POR</th>
           <th class="text-center" scope="col">AÇÃO</th>
         </tr>
       </thead>

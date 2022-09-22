@@ -3,9 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\FuncionarioModel;
+use App\Models\ProdutoModel;
 
 class FuncionarioController extends Controller
 {
+    private $objFuncionario, $objProduto;
+
+    public function __construct()
+    {
+        $this->objFuncionario = new FuncionarioModel();
+        $this->objProduto = new ProdutoModel();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +23,8 @@ class FuncionarioController extends Controller
      */
     public function index()
     {
-        return view('modules.Funcionario.FuncionarioListar');
+        $funcionario = $this->objFuncionario->All();
+        return view('modules.Funcionario.FuncionarioListar', compact('funcionario'));
     }
 
     /**
