@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\{
-    FuncionarioController
+    FuncionarioController,
+    ProdutoController
 };
 
 /*
@@ -18,3 +19,5 @@ use App\Http\Controllers\{
 
 Route::get('/funcionario', [FuncionarioController::class, 'index']);
 Route::get('/funcionario/{item}', [FuncionarioController::class, 'show']);
+
+Route::get('/produto', [ProdutoController::class, 'index']);
