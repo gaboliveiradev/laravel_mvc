@@ -24,7 +24,7 @@
             <td>{{$item->email}}</td>
             <td>{{$item->cpf}}</td>
             <td class="text-center">
-              <a href="" class="btn btn-dark">Visualizar</a>
+              <a href="{{url("funcionario/$item->id")}}" class="btn btn-dark">Visualizar</a>
               <a href="" class="btn btn-primary">Editar</a>
               <a href="" class="btn btn-danger">Deletar</a>
             </td>

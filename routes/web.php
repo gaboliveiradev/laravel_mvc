@@ -17,3 +17,4 @@ use App\Http\Controllers\{
 */
 
 Route::get('/funcionario', [FuncionarioController::class, 'index']);
+Route::get('/funcionario/{item}', [FuncionarioController::class, 'show']);

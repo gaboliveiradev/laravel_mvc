@@ -56,7 +56,8 @@ class FuncionarioController extends Controller
      */
     public function show($id)
     {
-        //
+        $funcionario = $this->objFuncionario->find($id);
+        return view('modules.Funcionario.FuncionarioExibir', compact('funcionario'));
     }
 
     /**
