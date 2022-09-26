@@ -18,7 +18,7 @@ use App\Http\Controllers\{
 */
 
 Route::post('/funcionario', [FuncionarioController::class, 'index']);
-Route::post('/funcionario/create', [FuncionarioController::class, 'create']);
+Route::get('/funcionario/create', [FuncionarioController::class, 'create']);
 Route::post('/funcionario/{item}', [FuncionarioController::class, 'show']);
 
 Route::post('/produto', [ProdutoController::class, 'index']);
